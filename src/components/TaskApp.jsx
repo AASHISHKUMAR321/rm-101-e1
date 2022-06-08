@@ -15,7 +15,7 @@ const TaskApp = ({ data }) => {
       <h1>Todo App</h1>
       <TaskHeader />
       {/* Add Task */}
-      <AddTask />
+      <AddTask data={data} />
       <Tasks task={data} />
       {/* Tasks */}
     </div>

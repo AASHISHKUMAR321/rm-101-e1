@@ -15,6 +15,9 @@ const Tasks = ({ task }) => {
     setRemove(index);
     // setData(data);
   };
+  const hadnleTask = (obj) => {
+    setData({ ...data, obj });
+  };
   console.log(data);
 
   return (
