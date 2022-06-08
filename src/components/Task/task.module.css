@@ -1,3 +1,13 @@
 .task {
-  /* Sample  */
+    /* Sample  */
+    display: flex;
+    width: 100%;
+    align-items: center;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 0.65rem 0;
+    padding-top: 0.65rem;
+    text-align: left;
+    justify-content: space-evenly;
+    color: white;
 }
