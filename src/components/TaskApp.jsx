@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./taskApp.module.css";
 
@@ -8,6 +8,12 @@ import Tasks from "./Tasks/Tasks";
 
 const TaskApp = ({ data }) => {
   // NOTE: do not delete `data-testid` key value pair
+  const [dataset, setData] = useState(data);
+
+  const handler = (obj) => {
+    console.log(obj);
+    setData({ ...dataset, obj });
+  };
   console.log(data);
   return (
     <div data-testid="task-app" className={styles.taskApp}>
@@ -15,7 +21,7 @@ const TaskApp = ({ data }) => {
       <h1>Todo App</h1>
       <TaskHeader />
       {/* Add Task */}
-      <AddTask data={data} />
+      <AddTask data={data} fun={handler} />
       <Tasks task={data} />
       {/* Tasks */}
     </div>

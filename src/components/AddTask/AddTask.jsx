@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { validate } from "uuid";
 import styles from "./addTask.module.css";
 
-const AddTask = ({ data }) => {
+const AddTask = ({ data, fun }) => {
   const [task, setTask] = useState({
     id: Math.random(),
     text: "",
@@ -12,7 +12,7 @@ const AddTask = ({ data }) => {
   const inputHandler = (e) => {
     setTask({ ...task, text: e.target.value });
   };
-  console.log(data);
+
   // NOTE: do not delete `data-testid` key value pair
   return (
     <div className={styles.todoForm}>
@@ -25,8 +25,7 @@ const AddTask = ({ data }) => {
       <button
         data-testid="add-task-button"
         onClick={() => {
-          data.push(task);
-          console.log(data);
+          fun(task);
         }}
       >
         Add
