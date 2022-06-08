@@ -1,3 +1,16 @@
 .addTask {
-  /* Sample */
+    /* Sample */
+    color: black;
+}
+
+.todoForm {
+    padding: 10px;
+}
+
+input {
+    padding: 10px 20px;
+}
+
+button {
+    padding: 10px;
 }
